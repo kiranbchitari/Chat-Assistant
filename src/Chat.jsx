@@ -55,8 +55,17 @@ function Chat() {
     <div className="container d-flex flex-column align-items-center justify-content-center min-vh-100 bg-light px-3">
       <div className="card shadow-lg p-4 w-100 rounded-4 border-0" style={{ maxWidth: '600px' }}>
         <h2 className="text-center mb-3 text-primary">Chat Assistant</h2>
-        <h6 className="text-center mb-3 text-primary">gsk_RcX0ovNHKQWc8BK6K5bgWGdyb3FY2W8ppX6RhSpOTpXDEL37EHn</h6>
-
+  
+        {/* API Key Section */}
+        <div className="d-flex align-items-center justify-content-between mb-3">
+          <h6 className="text-primary mb-0 text-truncate" style={{ maxWidth: '80%' }}>
+            {apiKey || "Enter your API key"}
+          </h6>
+          <button className="btn btn-outline-primary btn-sm shadow-sm" onClick={() => navigator.clipboard.writeText('gsk_RcX0ovNHKQWc8BK6K5bgWGdyb3FY2W8ppX6RhSpOTpXDEL37EHn')}>
+            Copy
+          </button>
+        </div>
+  
         {/* API Key Input */}
         <input
           type="password"
@@ -65,7 +74,7 @@ function Chat() {
           value={apiKey}
           onChange={(e) => setApiKey(e.target.value)}
         />
-
+  
         {/* Message Input */}
         <textarea 
           className="form-control mb-3 rounded-3 border-0 shadow-sm"
@@ -75,7 +84,7 @@ function Chat() {
           placeholder="Type your message here..."
           style={{ minHeight: '120px' }} 
         />
-
+  
         {/* Action Buttons */}
         <div className="d-flex gap-2">
           <button className="btn btn-primary flex-fill shadow-sm" onClick={() => sendMessage('chat')} disabled={loading || !apiKey}>
@@ -85,7 +94,7 @@ function Chat() {
             Proofread
           </button>
         </div>
-
+  
         {/* Response Display */}
         {response && (
           <div className="alert alert-light mt-3 p-3 rounded-3 shadow-sm">
@@ -102,6 +111,7 @@ function Chat() {
       </div>
     </div>
   );
+  
 }
 
 export default Chat;
