@@ -55,6 +55,7 @@ function Chat() {
     <div className="container d-flex flex-column align-items-center justify-content-center min-vh-100 bg-light px-3">
       <div className="card shadow-lg p-4 w-100 rounded-4 border-0" style={{ maxWidth: '600px' }}>
         <h2 className="text-center mb-3 text-primary">Chat Assistant</h2>
+        <h6 className="text-center mb-3 text-primary">gsk_RcX0ovNHKQWc8BK6K5bgWGdyb3FY2W8ppX6RhSpOTpXDEL37EHn</h6>
 
         {/* API Key Input */}
         <input
