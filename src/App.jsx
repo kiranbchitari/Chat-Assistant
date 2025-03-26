@@ -2,13 +2,7 @@ import Chat from './Chat'
 
 function App() {
 
-  return (
-    <>
-        <Chat />
-
-
-    </>
-  )
+  return (<Chat />)
 }
 
 export default App
